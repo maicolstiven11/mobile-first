@@ -1,4 +1,4 @@
-/* Estilo Mobile First puro: sin media queries */
+/* === Estilos base (Mobile First - vertical) === */
 * {
     margin: 0;
     padding: 0;
@@ -9,26 +9,26 @@ body {
     font-family: Arial, sans-serif;
     background: #000;
     color: #fff;
-    padding: 10px;
+    padding: 1em;
 }
 
 .logo {
-    width: 140px;
+    width: 8em;
     display: block;
-    margin: 10px auto;
+    margin: 1em auto;
 }
 
 .menu {
     text-align: center;
-    margin: 20px 0;
+    margin: 2em 0;
 }
 
 .menu a {
     color: orange;
     text-decoration: none;
     display: block;
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 0.5em 0;
+    font-size: 1.125rem;
 }
 
 main {
@@ -37,35 +37,83 @@ main {
 
 .card {
     background: #1e1e1e;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 10px;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border-radius: 0.625em;
 }
 
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 0.625em;
 }
 
 .card h2 {
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 1.25rem;
+    margin: 0.625em 0;
 }
 
 .card p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #ccc;
 }
 
 footer {
     text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 1.25em;
+    font-size: 0.875rem;
     color: #888;
 }
 
-.menu a:hover{
+.menu a:hover {
     color: white;
-    font-weight:bold ;
+    font-weight: bold;
+}
+
+/* === Media Queries === */
+
+/* Tablets ≥ 48em (768px) */
+@media (min-width: 48em) {
+    .menu a {
+        display: inline-block;
+        margin: 0 1em;
+        font-size: 1.25rem;
+    }
+
+    .logo {
+        width: 10em;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Escritorio ≥ 60em (960px) */
+@media (min-width: 60em) {
+    main {
+        max-width: 80%;
+        margin: 0 auto;
+        /* Agrupamos horizontalmente las cards */
+        text-align: left;
+    }
+
+    .card {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        margin: 1.5%;
+    }
+
+    .logo {
+        width: 12em;
+    }
+
+    .menu a {
+        font-size: 1.3rem;
+    }
 }
